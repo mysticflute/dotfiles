@@ -1,0 +1,10 @@
+[user]
+	name = Nathan McWilliams
+	email = mysticflute@users.noreply.github.com
+	# signingkey = TODO
+[core]
+	editor = "code --wait"
+[commit]
+	# gpgsign = true
+[rebase]
+	autosquash = true
