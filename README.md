@@ -25,6 +25,16 @@ Afterwards verify the installation was successful:
 $ xcode-select -p
 ```
 
+## Copy Dotfiles
+
+Manually copy any/all of the dotfiles from the dotfiles directory, or run `~./copy` to interactively copy ones that don't already exist or overwrite.
+
+- dotfiles/zshrc > ~/.zshrc
+- dotfiles/gitconfig > ~/.gitconfig
+- dotfiles/gitignore > ~/.gitignore
+
+The `.zshrc` file has lines that should be uncommented as their respective tools are installed.
+
 ## Install Homebrew
 
 Install [Homebrew](https://brew.sh).
@@ -39,7 +49,7 @@ brew install git
 
 ## Install Node
 
-The macOS installed can be downloaded from the [Node.js website](https://nodejs.org/en/download/), but using NVM is better.
+The macOS installer can be downloaded from the [Node.js website](https://nodejs.org/en/download/), but using NVM is better.
 
 ### NVM
 
@@ -103,28 +113,90 @@ nvm alias default 'lts/*'
 nvm alias default v19.14.2
 ```
 
-## Copy Dotfiles
-
-Manually copy any of the dotfiles from the dotfiles directory, or run `~./copy` to interactively copy ones that don't already exist or overwrite.
-
-- dotfiles/gitconfig > ~/.gitconfig
-- dotfiles/gitignore > ~/.gitignore
-
-The `.zshrc` file does not need to be copied, but it's here as a reference. Most of the content is automatically added while installing other tools.
-
 ## Install Fonts
 
-Some terminal themes require fonts with specific icons/glpyhs. Manually install all or one of the fonts in the [fonts directory](fonts/). To install, double-click on the font to open it in Font Book, then click the Install Font button.
+Some terminal themes require fonts with specific icons/glyphs. Manually install all or one of the fonts in the [fonts directory](fonts/). To install, double-click on the font to open it in Font Book, then click the Install Font button.
 
 More awesome fonts can be found at [NerdFonts](https://www.nerdfonts.com/font-downloads).
 
 ## Setup Terminal
 
+I use the built-in Terminal app, or sometimes [Hyper](https://hyper.is).
+
 ### Install Starship
 
-### Other Zsh Plugins
+[Starship](https://starship.rs) is a nice, clean terminal prompt. Install it via homebrew:
 
-## Copy Zsh Plugins
+```sh
+brew install starship
+```
+
+Uncomment out the starship line(s) in the `~/.zshrc` file.
+
+Alternative prompts I like:
+
+1. [Pure](https://github.com/sindresorhus/pure)
+2. [Powerlevel10k](https://github.com/romkatv/powerlevel10k) + [this theme](https://www.reddit.com/r/zsh/comments/b45w6v/pure_power_a_beautiful_theme_with_a_powerful_punch/)
+3. [Spaceship](https://spaceship-prompt.sh)
+4. [Oh My Zsh](https://ohmyz.sh)
+
+### Install More Zsh Plugins
+
+Optionally install the following plugins:
+
+[**zsh-autosuggestions**](https://github.com/zsh-users/zsh-autosuggestions) - adds greyed-out auto-suggestions while typing.
+
+```sh
+brew install zsh-autosuggestions
+```
+
+Tip: use the forward arrow key or opt+f or opt+b to accept suggestions.
+
+[**zsh-syntax-highlighting**](https://github.com/zsh-users/zsh-syntax-highlighting) - adds color highlightning to known and unknown command.
+
+```sh
+brew install zsh-syntax-highlighting
+```
+
+Uncomment out or delete the respective lines at the end of the `~/.zshrc` file.
+
+### Install Terminal Theme
+
+TODO submodules
+
+Install one or more themes from the [terminal](terminal/) directory.
+
+Double click on a theme file to add it to the Terminal app. Then click the "Default" button at the bottom left to have all new terminal windows use it.
+
+_After installing the theme you may need to change the font to one of the NerdFonts installed earlier._
+
+Themes I like the most:
+
+1. [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme) with Droid Sans Mono Nerd Font 15pt.
+2. [Snazzy Terminal](https://github.com/sindresorhus/terminal-snazzy) with Fire Code Retina Nerd Font 14pt.
+
+If using Hyper, I like the [hyper-snazzy](https://github.com/sindresorhus/hyper-snazzy) theme.
+
+### Simple Zsh Plugins
+
+Simple Zsh Plugins is a simple, hand-rolled way to customize the zsh shell with exports, aliases, functions, etc... It's similar to Oh My Zsh but simpler and less bloated. The script and all of my plugins are in the [`.zsh_plugins`](.zsh-plugins/) directory.
+
+1. Copy the `.zsh_plugins` directory to `~` (or already done if the `./copy.sh` script was run earlier).
+2. Open the `~/.zshrc` file and uncomment out the Simple Zsh Plugin lines.
+3. Add the names of any desired plugins from the `~/.zsh_plugins/plugins` directory to the plugins array. For example:
+
+   ```sh
+   plugins=(
+       core
+       dev
+       node
+       git
+   )
+   ```
+
+4. Restart the terminal app.
+
+See [the readme](.zsh-plugins/README.md) for more tips and usage.
 
 ## Create SSH Key
 
