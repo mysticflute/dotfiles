@@ -237,6 +237,13 @@ https://code.visualstudio.com/docs/editor/settings-sync
 2. Selecting the Sign in & Turn on button will ask you to choose between signing in with your Microsoft or GitHub account.
 3. After signing in, Settings Sync will be turned on and continue to synchronize your preferences automatically in the background.
 
+## Quick Look Syntax Highlightning
+
+Optionally, enable support for various codes files with Finder's quick look feature:
+
+1. Install [Syntax Highlight(https://github.com/sbarex/SourceCodeSyntaxHighlight)].
+2. Install [QL Markdown](https://github.com/sbarex/QLMarkdown).
+
 ## Finish
 
 run `./check.sh` to confirm everything is installed.
