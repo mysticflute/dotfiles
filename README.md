@@ -27,7 +27,7 @@ $ xcode-select -p
 
 ## Copy Dotfiles
 
-Manually copy any/all of the dotfiles from the dotfiles directory, or run `~./copy` to interactively copy ones that don't already exist or overwrite.
+Manually copy any/all of the dotfiles from the dotfiles directory, or run `./copy` to interactively copy ones that don't already exist or overwrite.
 
 - dotfiles/zshrc > ~/.zshrc
 - dotfiles/gitconfig > ~/.gitconfig
@@ -54,7 +54,7 @@ While a macOS installer can be downloaded from the [Node.js website](https://nod
 
 ### NVM
 
-[NVM](https://github.com/nvm-sh/nvm) is a version manager for node.js. Follow the [installation instructions](https://github.com/nvm-sh/nvm#installing-and-updating), then [install a version of node](https://github.com/nvm-sh/nvm).
+[NVM](https://github.com/nvm-sh/nvm) is a version manager for node.js. Follow the [installation instructions](https://github.com/nvm-sh/nvm#installing-and-updating), then [install a version of node](https://github.com/nvm-sh/nvm#usage).
 
 To install the latest LTS version of node:
 
@@ -181,7 +181,7 @@ If using Hyper, I like the [hyper-snazzy](https://github.com/sindresorhus/hyper-
 Simple Zsh Plugins is a simple, hand-rolled way to customize the zsh shell with exports, aliases, functions, etc... It's similar to Oh My Zsh but simpler and less bloated. The script and all of my plugins are in the [`.zsh_plugins`](.zsh-plugins/) directory.
 
 1. Copy the `.zsh_plugins` directory to `~` (or already done if the `./copy.sh` script was run earlier).
-2. Open the `~/.zshrc` file and uncomment out the Simple Zsh Plugin lines.
+2. Open the `~/.zshrc` file and uncomment out the Simple Zsh Plugins lines.
 3. Add the names of any desired plugins from the `~/.zsh_plugins/plugins` directory to the plugins array. For example:
 
    ```sh
@@ -195,11 +195,11 @@ Simple Zsh Plugins is a simple, hand-rolled way to customize the zsh shell with 
 
 4. Restart the terminal app.
 
-See [the readme](.zsh-plugins/README.md) for more tips and usage.
+See [the readme](.zsh-plugins/) for more tips and usage.
 
 ## Create SSH Key
 
-Follow GithHub's docs on [creating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys), then add it to GitHub.
+Follow GitHub's docs on [creating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys), then add it to GitHub.
 
 ## Create GPG Key
 
@@ -215,13 +215,13 @@ mkdir ~/Dev
 
 ### Clone Repositories
 
-Now's a good time to clone git projects into the dev directory (or do it later).
+Now's a good time to clone any existing git projects into the dev directory (or do it later).
 
 ## Setup Visual Studio Code
 
 ### Terminal
 
-Enable Visual Studio Code from the command line:<br/>
+Enable opening files and directories in VS Code from the command line:<br/>
 https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 
 1. Launch VS Code.
@@ -230,7 +230,7 @@ https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 
 ### Settings Sync
 
-Sync editor settings:<br/>
+Sync VS Code settings between machines:<br/>
 https://code.visualstudio.com/docs/editor/settings-sync
 
 1. You can turn on Settings Sync using the Turn On Settings Sync... entry in the Manage gear menu at the bottom of the Activity Bar.
