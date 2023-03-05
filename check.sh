@@ -28,19 +28,18 @@ print -rl -- $fpath
 
 # for commands that have a --version check
 cmds=(
-    brew
-    git
-    node
-    npm
-    code
+  brew
+  git
+  node
+  npm
+  code
 )
 
 for cmd in $cmds; do
-    echo "\nChecking for ${BLUE}$cmd${NC}"
-    if command -v $cmd &> /dev/null; then
-        echo "${GREEN}$($cmd --version)${NC}"
-    else
-        echo "$cmd was ${RED}not found!${NC}"
-    fi    
+  echo "\nChecking for ${BLUE}$cmd${NC}"
+  if command -v $cmd &>/dev/null; then
+    echo "${GREEN}$($cmd --version)${NC}"
+  else
+    echo "$cmd was ${RED}not found!${NC}"
+  fi
 done
-
