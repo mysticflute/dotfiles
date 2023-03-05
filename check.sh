@@ -20,7 +20,7 @@ YELLOW='\033[1;33m'
 GRAY='\033[0;30m'
 LIGHT_GRAY='\033[0;37m'
 
-echo "\nChecking ${BLUE}zsh${NC}"
+echo "Checking ${BLUE}zsh${NC}"
 zsh --version
 
 echo "\nfpath:"
@@ -40,6 +40,6 @@ for cmd in $cmds; do
   if command -v $cmd &>/dev/null; then
     echo "${GREEN}$($cmd --version)${NC}"
   else
-    echo "$cmd was ${RED}not found!${NC}"
+    echo "${RED}$cmd was not found!${NC}"
   fi
 done

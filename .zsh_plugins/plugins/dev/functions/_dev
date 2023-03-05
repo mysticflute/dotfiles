@@ -1,0 +1,5 @@
+#compdef dev
+
+autoload +X -Uz dev
+
+_files -W "${DEV_HOME:-$HOME/Dev}"

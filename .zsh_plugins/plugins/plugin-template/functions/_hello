@@ -1,0 +1,3 @@
+#compdef hello
+
+compadd world sekai monde

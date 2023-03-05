@@ -20,31 +20,56 @@ YELLOW='\033[1;33m'
 GRAY='\033[0;30m'
 LIGHT_GRAY='\033[0;37m'
 
-source_path=""${0:a:h}"/dotfiles"
+base_path="${0:a:h}" # current directory
 dest_path=$HOME
 
-for dotfile in $source_path/*; do
-  name="$(basename "${dotfile}")"
-  dest="$dest_path/.$name"
+function copy_path() {
+  local src=$1  # path of file or directory to copy
+  local dest=$2 # copy to this path
+  local name="$(basename "${src}")"
 
-  echo "\ncopying $name to $dest"
+  echo "copying $name to $dest"
 
+  local response
+  local exists=false
   if [[ -f "$dest" ]]; then
+    exists=true
     echo "Warning! ${YELLOW}$dest${NC} already exists."
     read -q "response?Backup existing file and copy anyway? [Yy/n] "
     echo
+  elif [[ -d "$dest" ]]; then
+    exists=true
+    echo "Warning! ${YELLOW}$dest${NC} already exists."
+    read -q "response?Backup existing directory and copy anyway? [Yy/n] "
+    echo
+  fi
+
+  if [[ "$exists" = true ]]; then
     if [[ "$response" =~ ^[Yy]$ ]]; then
       current_time=$(date "+%Y-%m-%d_%H-%M-%S")
       backup="$dest-backup-$current_time"
       echo "moving existing file to $backup"
       mv $dest $backup
-      cp $dotfile $dest
+      cp -R $src $dest
       echo "${GREEN}done${NC}"
     else
       echo ">>> skipping $name"
     fi
   else
-    cp $dotfile $dest
+    cp -R $src $dest
     echo "${GREEN}done${NC}"
   fi
+
+  echo
+}
+
+# copy dotfiles
+for dotfile in $base_path/dotfiles/*; do
+  dotfile_name="$(basename "${dotfile}")"
+  copy_path "$dotfile" "$dest_path/.$dotfile_name"
 done
+
+# copy simple zsh plugins
+copy_path "$base_path/.zsh_plugins" "$dest_path/.zsh_plugins"
+
+echo "Note: Some changes may require restarting the terminal."
