@@ -6,7 +6,7 @@ Bootstrap a new machine with configuration and installation of various tools and
 
 Install these apps manually:
 
-- Xcode (from the App Store)
+- [Xcode](https://apps.apple.com/us/app/xcode/id497799835) (from the App Store)
 - [Google Chrome](https://www.google.com/chrome/)
 - [Visual Studio Code](https://code.visualstudio.com)
 - [GPG Suite](https://gpgtools.org)
@@ -32,12 +32,13 @@ Manually copy any/all of the dotfiles from the dotfiles directory, or run `~./co
 - dotfiles/zshrc > ~/.zshrc
 - dotfiles/gitconfig > ~/.gitconfig
 - dotfiles/gitignore > ~/.gitignore
+- ...
 
-The `.zshrc` file has lines that should be uncommented as their respective tools are installed.
+The `.zshrc` file has lines that should be uncommented once their respective tools are installed.
 
 ## Install Homebrew
 
-Install [Homebrew](https://brew.sh).
+Install [Homebrew](https://brew.sh), a package manager for installing tools on macOS.
 
 ## Install Git
 
@@ -49,7 +50,7 @@ brew install git
 
 ## Install Node
 
-The macOS installer can be downloaded from the [Node.js website](https://nodejs.org/en/download/), but using NVM is better.
+While a macOS installer can be downloaded from the [Node.js website](https://nodejs.org/en/download/), using NVM is better.
 
 ### NVM
 
@@ -131,7 +132,7 @@ I use the built-in Terminal app, or sometimes [Hyper](https://hyper.is).
 brew install starship
 ```
 
-Uncomment out the starship line(s) in the `~/.zshrc` file.
+After installation, uncomment out the starship line(s) in the `~/.zshrc` file.
 
 Alternative prompts I like:
 
@@ -144,7 +145,7 @@ Alternative prompts I like:
 
 Optionally install the following plugins:
 
-[**zsh-autosuggestions**](https://github.com/zsh-users/zsh-autosuggestions) - adds greyed-out auto-suggestions while typing.
+[**zsh-autosuggestions**](https://github.com/zsh-users/zsh-autosuggestions) - adds history-based suggestions while typing.
 
 ```sh
 brew install zsh-autosuggestions
@@ -152,17 +153,15 @@ brew install zsh-autosuggestions
 
 Tip: use the forward arrow key or opt+f or opt+b to accept suggestions.
 
-[**zsh-syntax-highlighting**](https://github.com/zsh-users/zsh-syntax-highlighting) - adds color highlightning to known and unknown command.
+[**zsh-syntax-highlighting**](https://github.com/zsh-users/zsh-syntax-highlighting) - adds color highlightning to known and unknown commands.
 
 ```sh
 brew install zsh-syntax-highlighting
 ```
 
-Uncomment out or delete the respective lines at the end of the `~/.zshrc` file.
+Uncomment out the respective lines at the end of the `~/.zshrc` file.
 
 ### Install Terminal Theme
-
-TODO submodules
 
 Install one or more themes from the [terminal](terminal/) directory.
 
@@ -172,8 +171,8 @@ _After installing the theme you may need to change the font to one of the NerdFo
 
 Themes I like the most:
 
-1. [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme) with Droid Sans Mono Nerd Font 15pt.
-2. [Snazzy Terminal](https://github.com/sindresorhus/terminal-snazzy) with Fire Code Retina Nerd Font 14pt.
+1. [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme) with Droid Sans Mono Nerd Font, 15pt.
+2. [Snazzy Terminal](https://github.com/sindresorhus/terminal-snazzy) with Fire Code Retina Nerd Font, 14pt.
 
 If using Hyper, I like the [hyper-snazzy](https://github.com/sindresorhus/hyper-snazzy) theme.
 
@@ -200,11 +199,11 @@ See [the readme](.zsh-plugins/README.md) for more tips and usage.
 
 ## Create SSH Key
 
-### Add SSH Key to GitHub
+Follow GithHub's docs on [creating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys), then add it to GitHub.
 
-## Create/Add GPG Key
+## Create GPG Key
 
-### Add GPG Key to GitHub
+Follow GitHub's docs on [creating a new GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/checking-for-existing-gpg-keys). If one already exists then it can be exported from the old machine and imported to the new machine using [GPG Suite](https://gpgtools.org).
 
 ## Create Dev Directory
 
@@ -222,7 +221,7 @@ Now's a good time to clone git projects into the dev directory (or do it later).
 
 ### Terminal
 
-Enable Visual Studio Code from the command line:
+Enable Visual Studio Code from the command line:<br/>
 https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 
 1. Launch VS Code.
@@ -231,7 +230,7 @@ https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 
 ### Settings Sync
 
-Sync editor settings:
+Sync editor settings:<br/>
 https://code.visualstudio.com/docs/editor/settings-sync
 
 1. You can turn on Settings Sync using the Turn On Settings Sync... entry in the Manage gear menu at the bottom of the Activity Bar.

@@ -1,0 +1,33 @@
+### Simple Zsh Plugins
+### Uncomment these lines after copying the .zsh_plugins directory to ~
+# plugins=(
+#     dev
+# )
+#
+# source ~/.zsh_plugins/simple_zsh_plugins.zsh
+
+### MOVE THIS STUFF OUT
+# export EDITOR=nano
+# alias lsa='ls -ha'
+# alias lla='ls -lha'
+# alias ..='cd ..'
+# alias ...='cd .. ; cd ..'
+# alias grep='grep --color=auto'
+# alias g="git"
+# alias gl='git log --oneline --abbrev-commit --all --graph --decorate --color'
+
+### Uncomment these lines after installing nvm, or delete them if they were
+### automatically added after installing nvm.
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+### The following items should be kept at the end, i.e., loaded last.
+
+### Uncomment this line after installing Starship, otherwise delete it.
+#eval "$(starship init zsh)"
+
+### Uncomment these line after installing the respective plugins,
+### otherwise delete them.
+# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

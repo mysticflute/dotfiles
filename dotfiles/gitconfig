@@ -1,10 +1,12 @@
 [user]
 	name = Nathan McWilliams
 	email = mysticflute@users.noreply.github.com
+	### Uncomment after enabling GPG signing
 	# signingkey = TODO
 [core]
 	editor = "code --wait"
 [commit]
+	### Uncomment after enabling GPG signing
 	# gpgsign = true
 [rebase]
 	autosquash = true
