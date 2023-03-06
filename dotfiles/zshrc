@@ -6,21 +6,14 @@
 # export DEV_HOME=~/Dev
 #
 # plugins=(
+#     core
 #     dev
+#     git
+#     npm
 # )
 #
 # source ~/.zsh_plugins/simple_zsh_plugins.zsh
 # unset plugins
-
-### MOVE THIS STUFF OUT
-# export EDITOR=nano
-# alias lsa='ls -ha'
-# alias lla='ls -lha'
-# alias ..='cd ..'
-# alias ...='cd .. ; cd ..'
-# alias grep='grep --color=auto'
-# alias g="git"
-# alias gl='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
 ### Uncomment these lines after installing nvm, or delete
 ### if they were automatically added after installing nvm.

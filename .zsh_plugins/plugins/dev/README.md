@@ -1,6 +1,6 @@
 # Dev
 
-Utils for dev environments.
+General utils for dev environments.
 
 ## Functions
 
