@@ -72,4 +72,7 @@ done
 # copy simple zsh plugins
 copy_path "$base_path/.zsh_plugins" "$dest_path/.zsh_plugins"
 
-echo "Note: Some changes may require restarting the terminal."
+echo 'touching ~/.hushlogin'
+touch ~/.hushlogin
+
+echo '\nNote: Some changes may require restarting the terminal.'
