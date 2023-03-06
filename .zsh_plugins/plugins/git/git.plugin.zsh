@@ -1,7 +1,7 @@
 # General utils for git.
 
 ### Aliases
-alias g="git"
+alias g='git'
 alias gs='git status'
 
 alias ga='git add'

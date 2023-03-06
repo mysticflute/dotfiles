@@ -11,9 +11,11 @@ A simple method for creating and loading plugins in zsh. Similar to Oh My Zsh bu
     ```zsh
     plugins=(
         core
+        hist
         dev
-        node
         git
+        npm
+        vscode
     )
     ```
 

@@ -27,11 +27,10 @@ $ xcode-select -p
 
 ## Copy Dotfiles
 
-Manually copy any/all of the dotfiles from the dotfiles directory, or run `./copy` to interactively copy ones that don't already exist or overwrite.
+Manually copy any/all of the dotfiles from the dotfiles directory, or run `./copy.sh` to interactively copy ones that don't already exist or overwrite.
 
 - dotfiles/zshrc > ~/.zshrc
 - dotfiles/gitconfig > ~/.gitconfig
-- dotfiles/gitignore > ~/.gitignore
 - ...
 
 The `.zshrc` file has lines that should be uncommented once their respective tools are installed.
@@ -56,7 +55,7 @@ While a macOS installer can be downloaded from the [Node.js website](https://nod
 
 [NVM](https://github.com/nvm-sh/nvm) is a version manager for node.js. Follow the [installation instructions](https://github.com/nvm-sh/nvm#installing-and-updating), then [install a version of node](https://github.com/nvm-sh/nvm#usage).
 
-To install the latest LTS version of node:
+To install the latest LTS (Long-Term Support) version of node:
 
 ```sh
 nvm install --lts
@@ -178,7 +177,7 @@ If using Hyper, I like the [hyper-snazzy](https://github.com/sindresorhus/hyper-
 
 ### Simple Zsh Plugins
 
-Simple Zsh Plugins is a simple, hand-rolled way to customize the zsh shell with exports, aliases, functions, etc... It's similar to Oh My Zsh but simpler and less bloated. The script and all of my plugins are in the [`.zsh_plugins`](.zsh-plugins/) directory.
+Simple Zsh Plugins is a simple, hand-rolled way to customize the zsh shell with exports, aliases, functions, etc... It's similar to Oh My Zsh but simpler and less bloated. The script and all of my plugins are in the [`.zsh_plugins`](.zsh_plugins/) directory.
 
 1. Copy the `.zsh_plugins` directory to `~` (or already done if the `./copy.sh` script was run earlier).
 2. Open the `~/.zshrc` file and uncomment out the Simple Zsh Plugins lines.
@@ -188,14 +187,14 @@ Simple Zsh Plugins is a simple, hand-rolled way to customize the zsh shell with 
    plugins=(
        core
        dev
-       node
        git
+       npm
    )
    ```
 
 4. Restart the terminal app.
 
-See [the readme](.zsh-plugins/) for more tips and usage.
+See [the readme](.zsh_plugins/) for more tips and usage.
 
 ## Create SSH Key
 
@@ -221,8 +220,7 @@ Now's a good time to clone any existing git projects into the dev directory (or 
 
 ### Terminal
 
-Enable opening files and directories in VS Code from the command line:<br/>
-https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+Enable opening files and directories in VS Code [from the command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line):
 
 1. Launch VS Code.
 2. Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
@@ -230,8 +228,7 @@ https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 
 ### Settings Sync
 
-Sync VS Code settings between machines:<br/>
-https://code.visualstudio.com/docs/editor/settings-sync
+[Sync VS Code settings](https://code.visualstudio.com/docs/editor/settings-sync) between machines:<br/>
 
 1. You can turn on Settings Sync using the Turn On Settings Sync... entry in the Manage gear menu at the bottom of the Activity Bar.
 2. Selecting the Sign in & Turn on button will ask you to choose between signing in with your Microsoft or GitHub account.
@@ -241,9 +238,10 @@ https://code.visualstudio.com/docs/editor/settings-sync
 
 Optionally, enable support for various codes files with Finder's quick look feature:
 
-1. Install [Syntax Highlight(https://github.com/sbarex/SourceCodeSyntaxHighlight)].
+1. Install [Syntax Highlight](https://github.com/sbarex/SourceCodeSyntaxHighlight).
 2. Install [QL Markdown](https://github.com/sbarex/QLMarkdown).
 
 ## Finish
 
-run `./check.sh` to confirm everything is installed.
+run `./check.sh` to confirm everything is installed. <br />
+run `./hello.sh` for usage tips.
