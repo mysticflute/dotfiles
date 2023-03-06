@@ -1,0 +1,23 @@
+if [[ -z $DEV_HOME ]]; then
+  echo '$DEV_HOME must be set first (e.g., in ~/.zshrc).'
+  return 1
+fi
+
+if [[ ! -d "$DEV_HOME/dotfiles" ]]; then
+  echo 'The dotfiles repo must be cloned into the $DEV_HOME directory first.'
+  echo "$DEV_HOME/dotfiles could not be found."
+  return 1
+fi
+
+if [[ $# -eq 0 ]]; then
+  cd $DEV_HOME/dotfiles
+else
+  if [[ -x "$DEV_HOME/dotfiles/$1.sh" ]]; then
+    $DEV_HOME/dotfiles/$1.sh
+  elif [[ $1 = "help" ]] || [[ $1 = "tips" ]]; then
+    $DEV_HOME/dotfiles/hello.sh
+  else
+    echo "Script could not be found or is not executable:"
+    echo "$DEV_HOME/dotfiles/$1.sh"
+  fi
+fi

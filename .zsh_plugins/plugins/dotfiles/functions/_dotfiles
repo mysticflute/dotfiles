@@ -1,0 +1,3 @@
+#compdef dotfiles
+
+compadd check copy hello help
