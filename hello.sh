@@ -28,7 +28,7 @@ echo "tip: ${BLUE}ctrl+w${NC} to delete one word."
 echo "tip: ${BLUE}ctrl+u${NC} to delete from the cursor to beginning of line."
 echo "tip: ${BLUE}ctrl+k${NC} to delete from the cursor to end of line."
 echo
-echo "try: ${BLUE}dirs${NC}, ${BLUE}pushd${NC} and ${BLUE}popd${NC} for traversal."
+echo "try: ${YELLOW}dirs${NC}, ${YELLOW}pushd (directory)${NC} and ${YELLOW}popd${NC} for traversal."
 echo
 echo "core plugin: cd to a directory just by typing its name."
 echo "core plugin: go back to previous directory with ${YELLOW}-${NC}."
