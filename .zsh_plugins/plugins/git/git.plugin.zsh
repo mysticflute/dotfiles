@@ -19,6 +19,7 @@ alias gf='git fetch'
 alias gfo='git fetch origin'
 alias gp='git push'
 alias gpl='git pull'
+alias gpi='git pull && npm install'
 
 alias grem='git remote'
 alias grema='git remote add'
