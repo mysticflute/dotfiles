@@ -1,6 +1,8 @@
 # Configuration for shell history
 
-alias hg='history | grep '
+alias h='history -100'
+alias ha='history 1'
+alias hg='history 1 | grep '
 
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 [ "$HISTSIZE" -lt 50000 ] && HISTSIZE=50000
